@@ -15,7 +15,7 @@ class Scrapy:
             return soup.find_all("div", class_="blog-card group")
         return []
 
-    def get_links_from_articles(self):
+    def create_report(self):
         for indice in range(self.pages):
             url = f"http://blog.mercadoedu.com.br/page/{indice}/"
             articles = self.scrape_articles(url)
